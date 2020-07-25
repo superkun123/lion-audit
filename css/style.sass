@@ -1,2 +1,173 @@
-h1 
-    columns: #333333
+p
+    color: #353030
+    font-size: 22px
+    font-family: PT Sans Narrow
+    margin: 0
+
+a
+    font-size: 18px
+    font-family: PT Sans Narrow
+    color: #353030
+
+h1,h2,h3,h4,h5 
+    font-family: PT Sans Narrow
+    margin: 0
+    color: #353030
+    font-weight: bold
+
+h2 
+    font-size: 48px
+
+h3 
+    font-size: 32px
+
+main 
+    padding-left: 60px
+    padding-right: 60px
+
+.nav-main
+    padding-left: 60px
+    padding-right: 60px
+    margin-top: 60px
+    margin-bottom: 60px
+    display: flex
+    justify-content: space-between
+
+.nav-main__phone, .nav-main__adress
+    font-weight: bold
+    font-size: 26px
+
+.nav-main__phone-n-adress 
+    display: flex
+    padding-top: 20px
+
+.nav-main__phone 
+    margin-right: 60px
+
+.nav-main__hamburger
+    margin-left: 150px
+
+.news-slider
+    padding-left: 0
+    padding-right: 0
+
+.slider__item 
+    display: flex
+
+.slider__item-container
+    width: 50%
+    background-color: #F3F3F3
+    padding-left: 100px
+    padding-top: 80px
+    padding-right: 100px
+    max-width: 700px
+
+.slider__img-container 
+    max-width: 900px
+    & img
+        width: 100% 
+
+
+.slider__title 
+    font-size: 72px
+    margin-bottom: 10px
+
+.slider__text
+    margin-bottom: 20px
+
+.slider__btn 
+    background-color: #1A45B5
+    padding-top: 5px
+    padding-bottom: 5px
+    padding-left: 30px
+    padding-right: 30px
+    color: #fff
+    font-weight: 500
+    font-size: 30px
+    text-decoration: none
+    display: block
+    max-width: 120px
+    margin-bottom: 50px
+    
+section 
+    margin-bottom: 150px
+
+.about-company
+    display: flex
+
+.about-company__text-container 
+    padding-left: 100px
+    max-width: 50%
+    margin-right: 5%
+    padding-top: 53px
+
+.about-company__title 
+    margin-bottom: 20px
+
+.services
+    background:  #F3F3F3
+    width: 556px 
+    min-height: 300px
+    padding-left: 36px
+    padding-top: 53px
+    padding-bottom: 30px
+    padding-right: 36px
+
+.services__list 
+    list-style: none
+    & li 
+        margin-bottom: 10px
+        transition: all 0.4s ease-in-out
+        transform: translateX(0px)
+        & a 
+            font-size: 30px
+            text-decoration: none    
+    & li:hover
+        transition: all 0.4s ease-in-out
+        transform: translateX(30px)
+        
+
+.victories
+    padding-left: 100px
+    padding-right: 100px
+
+.victories__main-title
+    text-align: center
+    margin-bottom: 50px
+
+.victories-post__row
+    display: flex
+    justify-content: space-between
+    margin-bottom: 90px
+    flex-wrap: wrap
+
+
+    
+
+.victories-post
+    max-width: 420px
+    display: block
+    text-decoration: none
+    transition: all 0.4s ease-in-out
+    transform: translateY(0px)
+    &:hover
+        transition: all 0.4s ease-in-out
+        transform: translateY(-50px)
+
+.victories-post__img
+    margin-bottom: 20px
+
+.victories-post__title
+    margin-bottom: 15px
+
+.victories__btn 
+    display: flex
+    justify-content: center
+    & a 
+        color: #ffffff
+        @extend .slider__btn 
+        max-width: 150px
+
+@font-face 
+    font-family: PT Sans Narrow
+    src: url("../fonts/PTSansNarrow-Regular.ttf")

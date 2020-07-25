@@ -13,6 +13,7 @@
   "author": "Egor Kolyadintsev",
   "license": "ISC",
   "dependencies": {
+    "normalize.css": "^8.0.1",
     "pug": "^3.0.0"
   }
 }

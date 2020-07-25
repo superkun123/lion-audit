@@ -1,8 +1,81 @@
 <!DOCTYPE html>
 html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Document
-    body
-    h1 test
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Document
+    link(rel="stylesheet" href="css/style.css")
+  body
+    header.header-main
+      .nav-main
+        .nav-main__logo-container
+          img.nav-main__logo(src="./img/logo.png" alt="логотип")
+        .nav-main__phone-n-adress
+          a.nav-main__phone(href="#") +7 (343) 371-77-66/377-60-47
+          p.nav-main__adress г. Екатеринбург, пр. Ленина, д. 5/4
+          a.nav-main__hamburger(href="#")
+            img(src="./img/menu.png" alt="меню")
+    main.main-page
+      section.news-slider
+        .slider
+          .slider__item
+            .slider__item-container
+              h2.slider__title Новость 1
+              p.slider__text Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без 
+              a.slider__btn(href="#") Подробнее
+            .slider__img-container
+              img.src(src="./img/house.png" alt="дом")
+      section.about-company
+        .about-company__text-container
+          h2.about-company__title О компании
+          p.about-compnay__text Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без
+        .services
+          h2.services__title Услуги
+          ul.services__list
+            li 
+              a(href="#") Представление интересов в судах
+                <i class="fal fa-long-arrow-right"></i>
+            li 
+              a(href="#") Налоговый консалтинг
+                <i class="fal fa-long-arrow-right"></i>
+            li
+              a(href="#") Аудит
+                <i class="fal fa-long-arrow-right"></i>
+      section.victories
+        h2.victories__main-title Наши победы
+        .victories-post__row
+          a.victories-post(href="#")
+            .victories-post__img
+              img(src="./img/victories-photo.png")
+            h3.victories-post__title Представление интересов в судах
+            p.victories-post__text Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной рыбой" для текстов на латинице с начала XVI века.
+          a.victories-post(href="#")
+            .victories-post__img
+              img(src="./img/victories-photo.png")
+            h3.victories-post__title Представление интересов в судах
+            p.victories-post__text Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной рыбой" для текстов на латинице с начала XVI века.
+          a.victories-post(href="#")
+            .victories-post__img
+              img(src="./img/victories-photo.png")
+            h3.victories-post__title Представление интересов в судах
+            p.victories-post__text Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной рыбой" для текстов на латинице с начала XVI века.
+          a.victories-post(href="#")
+            .victories-post__img
+              img(src="./img/victories-photo.png")
+            h3.victories-post__title Представление интересов в судах
+            p.victories-post__text Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной рыбой" для текстов на латинице с начала XVI века.
+          a.victories-post(href="#")
+            .victories-post__img
+              img(src="./img/victories-photo.png")
+            h3.victories-post__title Представление интересов в судах
+            p.victories-post__text Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной рыбой" для текстов на латинице с начала XVI века.
+          a.victories-post(href="#")
+            .victories-post__img
+              img(src="./img/victories-photo.png")
+            h3.victories-post__title Представление интересов в судах
+            p.victories-post__text Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной рыбой" для текстов на латинице с начала XVI века.
+        .victories__btn 
+          a(href="#") Все новости
+
+
+
