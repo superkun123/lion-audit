@@ -1,6 +1,6 @@
 p
     color: #353030
-    font-size: 22px
+    font-size: 18px
     font-family: PT Sans Narrow
     margin: 0
 
@@ -19,7 +19,7 @@ h2
     font-size: 48px
 
 h3 
-    font-size: 32px
+    font-size: 27px
 
 main 
     padding-left: 60px
@@ -53,6 +53,7 @@ main
 
 .slider__item 
     display: flex
+    justify-content: space-between
 
 .slider__item-container
     width: 50%
@@ -74,9 +75,10 @@ main
 
 .slider__text
     margin-bottom: 20px
+    font-size: 22px
 
-.slider__btn 
-    background-color: #1A45B5
+.slider__btn
+    background: #1748c7
     padding-top: 5px
     padding-bottom: 5px
     padding-left: 30px
@@ -88,30 +90,40 @@ main
     display: block
     max-width: 120px
     margin-bottom: 50px
+    transition: all 0.4s ease-in-out
+    &:hover
+        background: #163ea7
+        transition: all 0.4s ease-in-out
     
 section 
     margin-bottom: 150px
 
 .about-company
     display: flex
+    justify-content: space-between
 
 .about-company__text-container 
     padding-left: 100px
-    max-width: 50%
+    max-width: 800px
     margin-right: 5%
     padding-top: 53px
 
 .about-company__title 
     margin-bottom: 20px
 
+.about-compnay__text
+    font-size: 22px
+
 .services
     background:  #F3F3F3
-    width: 556px 
+    max-width: 600px 
     min-height: 300px
     padding-left: 36px
     padding-top: 53px
     padding-bottom: 30px
     padding-right: 36px
+    margin-right: 100px
+    min-width: 450px
 
 .services__list 
     list-style: none
@@ -133,32 +145,37 @@ section
 
 .victories__main-title
     text-align: center
-    margin-bottom: 50px
+    margin-bottom: 40px
 
 .victories-post__row
     display: flex
     justify-content: space-between
-    margin-bottom: 90px
     flex-wrap: wrap
 
 
     
 
 .victories-post
-    max-width: 420px
+    max-width: 400px
     display: block
     text-decoration: none
+    margin-bottom: 80px
+    margin-left: 15px
     transition: all 0.4s ease-in-out
     transform: translateY(0px)
     &:hover
         transition: all 0.4s ease-in-out
-        transform: translateY(-50px)
+        transform: translateY(-35px)
 
 .victories-post__img
     margin-bottom: 20px
+    & img
+        object-fit: cover
+        width: 100%
 
 .victories-post__title
     margin-bottom: 15px
+
 
 .victories__btn 
     display: flex
@@ -167,7 +184,267 @@ section
         color: #ffffff
         @extend .slider__btn 
         max-width: 150px
+.proBono__logo
+    padding-left: 100px
 
+.proBono
+    display: flex
+    justify-content: space-between
+
+.proBono__features
+    padding-right: 100px
+    padding-left: 15%
+
+.proBono__list li 
+    list-style: none
+    margin-bottom: 30px
+
+.proBono__list li a 
+    text-decoration: none
+
+.reviews
+    background: #F3F3F3
+
+.reviews__title
+    text-align: center
+    padding-top: 30px
+    padding-bottom: 40px
+
+
+.reviews__container
+    padding-left: 100px
+    padding-right: 100px
+    padding-bottom: 60px
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+.review-block 
+    max-width: 420px
+
+.review-block__header
+    display: flex
+    align-items: center
+    margin-bottom: 15px
+
+.review-block__title 
+    margin-left: 30px
+
+.review-block__thumb
+    background: #000
+    border-radius: 100%
+    width: 80px
+    height: 80px
+    object-fit: cover
+
+
+.map__title
+    text-align: center
+    margin-bottom: 40px
+
+.map__container
+    padding-left: 60px
+    padding-right: 60px
+    & img
+        width: 100%
+
+.main-footer
+    padding-right: 60px
+    padding-left: 60px
+    display: flex
+    justify-content: space-between
+    margin-bottom: 40px
+    flex-wrap: wrap
+
+.contacts
+    &__modal
+        font-size: 36px
+        text-decoration: none
+        font-weight: bold
+        display: block
+    &__phone
+        font-weight: bold
+        font-size: 22px
+        text-decoration: none
+        margin-top: 10px
+        margin-bottom: 10px
+        display: block
+
+.logo-container
+    padding-top: 20px
+    & img
+        width: 100%
+
+
+
+
+@media ( min-width:320px ) and  ( max-width:900px  )  
+    .about-company
+        display: block
+    section
+        margin-bottom: 100px
+    .about-company__text-container
+        padding-top: 0
+        margin-bottom: 100px
+    .services
+        max-width: 100%
+        margin: 0
+    .victories-post__row
+        display: block
+    .victories-post__row > .victories-post
+        max-width: 100%
+        margin: 0 auto
+        margin-bottom: 50px
+    .proBono
+        display: block
+    .proBono__logo
+        margin-bottom: 25px
+    .proBono__list
+        padding-left: 0
+    .main-footer
+        display: block
+    .logo-container
+        text-align: center
+        margin-top: 50px
+        & img
+            max-width: 400px
+    .contacts
+        margin: 0 auto
+        text-align: center
+    .nav-main__logo 
+        max-width: 300px
+        padding-top: 15px
+
+
+
+ 
+
+@media ( min-width:320px ) and  ( max-width:1100px  )  
+    .slider__item
+         background: #f3f3f3
+         display: block
+    .slider__item-container
+        max-width: 100%
+        width: auto
+    .proBono__features
+        padding-left: 5%
+    .services
+        min-width: 300px
+    .proBono__logo img
+        max-width: 300px
+
+@media ( min-width:320px ) and  ( max-width:1200px  )  
+    .reviews__container
+        display: block
+    .reviews__container > .review-block
+        max-width: 100%
+        margin-bottom: 30px
+    .nav-main__phone
+        display: none
+    .nav-main__adress
+        display: none
+    .services
+        min-width: 350px
+
+
+@media ( min-width:320px ) and  ( max-width:1440px  )  
+        .victories-post
+          max-width: 320px
+        .nav-main__logo
+            max-width: 350px
+        .proBono__logo img
+            max-width: 400px
+        .nav-main__hamburger
+            margin-left: 50px
+        .review-block
+            margin-top: 20px
+    
+
+@media ( min-width:320px ) and  ( max-width:1650px  )
+    .victories
+        padding-left: 30px
+        padding-right: 30px
+
+    .about-company__text-container
+        padding-left: 30px
+
+    .reviews__container 
+        padding-left: 30px
+        padding-right: 30px
+
+    .proBono__logo
+        padding-left: 30px
+
+    .proBono__features
+        padding-right: 30px
+
+    .services
+        margin-right: 30px
+
+    .slider__item-container
+        padding-left: 50px
+
+
+    .review-block
+        max-width: 320px
+        margin-left: 15px
+
+    .nav-main__phone, .nav-main__adress
+        font-size: 20px
+
+
+
+@media ( min-width:320px ) and  ( max-width:630px  )  
+    .nav-main__logo-container > a > img
+        max-width: 250px
+    .nav-main__phone-n-adress
+        padding-top: 25px
+    .nav-main__hamburger img
+        width: 60px
+    .main-page
+        padding-left: 30px
+        padding-right: 30px
+    .about-company > .services
+        margin-right: 0
+    .slider__item-container 
+        padding-left: 50px
+    .map__container 
+        padding-left: 30px
+        padding-right: 30px
+    .nav-main
+        padding-left: 30px
+        padding-right: 30px
+    .nav-main
+        margin-top: 30px
+        margin-bottom: 30px
+    .proBono >.proBono__logo img
+        max-width: 250px 
+    .slider__item .slider__item-container
+        padding-right: 30px
+        padding-left: 30px
+
+
+@media ( min-width:320px ) and  ( max-width:480px  )  
+    .main-page
+        padding-left: 10px
+        padding-right: 10px
+    .main-page .services
+        min-width: auto
+    .services__list
+        padding-left: 15px
+    .reviews__container
+        padding-left: 15px
+        padding-right: 15px
+    .nav-main__logo-container > a > img
+        max-width: 200px
+    .nav-main 
+        padding-left: 15px
+        padding-right: 15px
+    .nav-main__phone-n-adress
+        padding-top: 15px
+    .slider__title
+        font-size: 48px
+    
 @font-face 
     font-family: PT Sans Narrow
     src: url("../fonts/PTSansNarrow-Regular.ttf")
