@@ -8,7 +8,6 @@ menuBtn.addEventListener('click', function() {
     menu.classList.toggle('show')
     menu.classList.toggle('hide')
     menuBtn.classList.toggle('close')
-    console.log('1')
 })
 
 modalBtn.addEventListener('click', function() {
