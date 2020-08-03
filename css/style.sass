@@ -32,6 +32,7 @@ main
 
 .show
     opacity: 1 !important
+    z-index: 99
   
 .close
     background: url(../img/close.svg) !important
@@ -70,7 +71,7 @@ main
     position: absolute
     width: 100%
     background: #fff
-    opacity: 0
+    z-index: 99
     transition: opacity 0.3s ease-out
     & ul
         list-style: none
@@ -94,6 +95,9 @@ main
 .news-slider
     padding-left: 0
     padding-right: 0
+
+.swiper-slide
+    display: flex
 
 .slider__item 
     display: flex
@@ -138,6 +142,16 @@ main
     &:hover
         background: #163ea7
         transition: all 0.4s ease-in-out
+    
+.swiper-pagination
+    max-width: 300px
+    display: flex
+    width: 100%
+    justify-content: flex-start
+    margin-top: 20px
+
+.swiper-pagination-bullet
+    margin-right: 10px
     
 section 
     margin-bottom: 150px
@@ -443,6 +457,9 @@ section
         min-width: 300px
     .proBono__logo img
         max-width: 300px
+    .swiper-slide
+        display: block
+        background: #f3f3f3
 
 @media ( min-width:320px ) and  ( max-width:1200px  )  
     .reviews__container

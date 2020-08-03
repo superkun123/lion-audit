@@ -5,6 +5,7 @@ html(lang="en")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     title Document
     link(rel="stylesheet" href="css/style.css")
+    link(rel='stylesheet' href='https://unpkg.com/swiper/swiper-bundle.min.css')
   body
     header.header-main
       .nav-main
@@ -31,14 +32,37 @@ html(lang="en")
             a(href="#") Партнёры
     main.main-page
       section.news-slider
-        .slider
-          .slider__item
-            .slider__item-container
-              h2.slider__title Новость 1
-              p.slider__text Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без 
-              a.slider__btn(href="#") Подробнее
-            .slider__img-container
-              img.src(src="./img/house.png" alt="дом")
+        .swiper-container
+          .swiper-wrapper
+            .swiper-slide 
+              .slider__item-container
+                h2.slider__titlte Новость 1
+                p.slider__text Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без 
+                a.slider__btn(href="#") Подробнее
+              .slider__img-container
+                img.src(src="./img/house.png" alt="дом")
+            .swiper-slide 
+              .slider__item-container
+                h2.slider__titlte Новость 2
+                p.slider__text Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без 
+                a.slider__btn(href="#") Подробнее
+              .slider__img-container
+                img.src(src="./img/house.png" alt="дом")
+            .swiper-slide 
+              .slider__item-container
+                h2.slider__titlte Новость 3
+                p.slider__text Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без 
+                a.slider__btn(href="#") Подробнее
+              .slider__img-container
+                img.src(src="./img/house.png" alt="дом")
+        .swiper-pagination
+          //- .slider__item
+          //-   .slider__item-container
+          //-     h2.slider__title Новость 1
+          //-     p.slider__text Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без 
+          //-     a.slider__btn(href="#") Подробнее
+          //-   .slider__img-container
+          //-     img.src(src="./img/house.png" alt="дом")
       section.about-company
         .about-company__text-container
           h2.about-company__title О компании
@@ -147,4 +171,5 @@ html(lang="en")
       .logo-container
         a(href="#")
           img(src="./img/logo.png", alt="Логотип")
+    script(src='https://unpkg.com/swiper/swiper-bundle.min.js')
     script(src="js/main.js")
