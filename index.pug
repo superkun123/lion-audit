@@ -15,7 +15,20 @@ html(lang="en")
           a.nav-main__phone(href="#") +7 (343) 371-77-66/377-60-47
           p.nav-main__adress г. Екатеринбург, пр. Ленина, д. 5/4
           a.nav-main__hamburger(href="#")
-            img(src="./img/menu.png" alt="меню")
+      .nav__list
+        ul
+          li
+            a О компании
+          li
+            a Услуги
+          li
+            a Новости
+          li
+            a Команда
+          li
+            a Про боно и поддержка бизнеса
+          li 
+            a Партнёры
     main.main-page
       section.news-slider
         .slider
@@ -35,13 +48,12 @@ html(lang="en")
           ul.services__list
             li 
               a(href="#") Представление интересов в судах
-                <i class="fal fa-long-arrow-right"></i>
             li 
               a(href="#") Налоговый консалтинг
-                <i class="fal fa-long-arrow-right"></i>
             li
               a(href="#") Аудит
-                <i class="fal fa-long-arrow-right"></i>
+          a.main-link(href="#") Все услуги
+            img(src="/img/arrow.svg")
       section.victories
         h2.victories__main-title Наши победы
         .victories-post__row
@@ -88,6 +100,8 @@ html(lang="en")
               a(href="#") Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. 
             li 
               a(href="#") Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
+          a.main-link(href="#") Подробнее
+            img(src="/img/arrow.svg")
       section.reviews
         h2.reviews__title Отзывы
         .reviews__container
@@ -113,6 +127,18 @@ html(lang="en")
       h2.map__title Наша география
       .map__container
         img(src="/img/map.png", alt="Карта")
+    .modal
+      .modal__header
+        h2.modal__title Заголовок
+        a.modal__cross(href="#")
+      .modal__body
+        form(action="#" )
+          input(type="text" placeholder="Ваше имя")
+          input(type="phone" placeholder="Номер телефона")
+          input(type="mail" placeholder="Почта")
+          input(type="checkbox")
+          label(for="checkbox") Я согласен в политикой обработки данных
+          input(type="submit")
     footer.main-footer
       .contacts
         a.contacts__modal(href="#") Связаться с нами
@@ -121,3 +147,4 @@ html(lang="en")
       .logo-container
         a(href="#")
           img(src="./img/logo.png", alt="Логотип")
+    script(src="js/main.js")

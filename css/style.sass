@@ -21,9 +21,21 @@ h2
 h3 
     font-size: 27px
 
-main 
+body 
+    position: relative
+
+
+main
     padding-left: 60px
     padding-right: 60px
+
+
+.show
+    opacity: 1 !important
+  
+.close
+    background: url(../img/close.svg) !important
+    background-size: cover !important
 
 .nav-main
     padding-left: 60px
@@ -39,13 +51,45 @@ main
 
 .nav-main__phone-n-adress 
     display: flex
-    padding-top: 20px
+    padding-top: 10px
 
 .nav-main__phone 
     margin-right: 60px
 
 .nav-main__hamburger
-    margin-left: 150px
+    margin-left: 50px
+    width: 50px
+    height: 50px
+    background: url(../img/menu.svg)
+    background-size: cover
+    transition: 0.3s ease-out
+    opacity: 1
+
+.nav__list 
+    opacity: 0
+    position: absolute
+    width: 100%
+    background: #fff
+    opacity: 0
+    transition: opacity 0.3s ease-out
+    & ul
+        list-style: none
+        font-size: 28px
+        padding-left: 60px
+        padding-right: 60px
+        margin-top: 0
+
+    & li
+        margin-bottom: 10px
+        transition: all 0.4s ease-in-out
+        transform: translateX(0px)
+
+    & li:hover
+        transition: all 0.4s ease-in-out
+        transform: translateX(20px)
+    & a
+        font-size: 28px
+        text-decoration: none
 
 .news-slider
     padding-left: 0
@@ -115,7 +159,7 @@ section
     font-size: 22px
 
 .services
-    background:  #F3F3F3
+    background: #F3F3F3
     max-width: 600px 
     min-height: 300px
     padding-left: 36px
@@ -127,17 +171,35 @@ section
 
 .services__list 
     list-style: none
+    margin-bottom: 50px
     & li 
         margin-bottom: 10px
         transition: all 0.4s ease-in-out
         transform: translateX(0px)
         & a 
             font-size: 30px
-            text-decoration: none    
+            text-decoration: none
+
     & li:hover
         transition: all 0.4s ease-in-out
         transform: translateX(30px)
-        
+
+    
+
+.main-link
+    display: flex
+    font-size: 30px
+    text-decoration: none
+    justify-content: flex-end
+    align-items: flex-end 
+    & img
+        width: 33px
+        margin-left: 15px
+        transition: all 0.3s ease-in-out
+        transform: translateX(0px)
+    &:hover img
+        transition: all 0.3s ease-in-out
+        transform: translateX(15px)
 
 .victories
     padding-left: 100px
@@ -243,8 +305,6 @@ section
     margin-bottom: 40px
 
 .map__container
-    padding-left: 60px
-    padding-right: 60px
     & img
         width: 100%
 
@@ -275,8 +335,59 @@ section
     & img
         width: 100%
 
+.modal
+    position: absolute
+    background: #fff
+    padding: 30px
+    top: 90%
+    left: 0%
+    margin-right: auto
+    margin-left: auto
+    right: 0%
+    width: 380px
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    justify-content: center
+    box-shadow: 0px 21px 26px -17px rgb(0 0 0 / 32%)
+    opacity: 0
+    transition: opacity 0.3s ease-out
+
+.modal__header
+    display: flex
+    justify-content: space-between
+    margin-bottom: 30px
+
+.modal__body
+    & input[type="text"], input[type="phone"], input[type="mail"]
+        display: block
+        border: none
+        border-bottom: 1.3px solid #e4e4e4
+        width: 90%
+        margin-bottom: 30px
+    & input:focus
+        border: none
+        border-bottom: 1.3px solid #e4e4e4
+        outline: none
+        padding-bottom: 20px
+        transition: 0.4s
+    & input[type="checkbox"]
+        display: inline-block
+        margin-right: 10px
+    & input[type="submit"]
+        background: #1748c7
+        padding: 10px 20px
+        color:#fff
+        border: none
+        margin-top: 30px
+        display: block
 
 
+.modal__cross
+    background: url(../img/close.svg)
+    background-size: cover
+    width: 20px
+    height: 20px
 
 @media ( min-width:320px ) and  ( max-width:900px  )  
     .about-company
@@ -321,8 +432,8 @@ section
 
 @media ( min-width:320px ) and  ( max-width:1100px  )  
     .slider__item
-         background: #f3f3f3
-         display: block
+        background: #f3f3f3
+        display: block
     .slider__item-container
         max-width: 100%
         width: auto
@@ -345,11 +456,13 @@ section
         display: none
     .services
         min-width: 350px
+    .nav-main__hamburger
+        margin-left: auto
 
 
 @media ( min-width:320px ) and  ( max-width:1440px  )  
-        .victories-post
-          max-width: 320px
+    .victories-post
+        max-width: 320px
         .nav-main__logo
             max-width: 350px
         .proBono__logo img
@@ -399,8 +512,9 @@ section
         max-width: 250px
     .nav-main__phone-n-adress
         padding-top: 25px
-    .nav-main__hamburger img
-        width: 60px
+    .nav-main__hamburger
+        width: 40px
+        height: 40px
     .main-page
         padding-left: 30px
         padding-right: 30px
@@ -408,9 +522,6 @@ section
         margin-right: 0
     .slider__item-container 
         padding-left: 50px
-    .map__container 
-        padding-left: 30px
-        padding-right: 30px
     .nav-main
         padding-left: 30px
         padding-right: 30px
@@ -422,6 +533,12 @@ section
     .slider__item .slider__item-container
         padding-right: 30px
         padding-left: 30px
+    .main-footer
+        padding-left: 30px
+        padding-right: 30px
+    .nav__list ul 
+        padding-left: 30px
+        padding-right: 30px
 
 
 @media ( min-width:320px ) and  ( max-width:480px  )  
@@ -441,9 +558,17 @@ section
         padding-left: 15px
         padding-right: 15px
     .nav-main__phone-n-adress
-        padding-top: 15px
+        padding-top: 7px
     .slider__title
         font-size: 48px
+    .modal
+        width: 300px
+        padding: 20px
+
+@media ( min-width:320px ) and  ( max-width:390px  )  
+    .modal
+        width: 250px
+        padding: 20px
     
 @font-face 
     font-family: PT Sans Narrow

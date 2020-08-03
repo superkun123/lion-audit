@@ -26,9 +26,22 @@ h3 {
   font-size: 27px;
 }
 
+body {
+  position: relative;
+}
+
 main {
   padding-left: 60px;
   padding-right: 60px;
+}
+
+.show {
+  opacity: 1 !important;
+}
+
+.close {
+  background: url(../img/close.svg) !important;
+  background-size: cover !important;
 }
 
 .nav-main {
@@ -47,7 +60,7 @@ main {
 
 .nav-main__phone-n-adress {
   display: flex;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 .nav-main__phone {
@@ -55,7 +68,42 @@ main {
 }
 
 .nav-main__hamburger {
-  margin-left: 150px;
+  margin-left: 50px;
+  width: 50px;
+  height: 50px;
+  background: url(../img/menu.svg);
+  background-size: cover;
+  transition: 0.3s ease-out;
+  opacity: 1;
+}
+
+.nav__list {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  background: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+.nav__list ul {
+  list-style: none;
+  font-size: 28px;
+  padding-left: 60px;
+  padding-right: 60px;
+  margin-top: 0;
+}
+.nav__list li {
+  margin-bottom: 10px;
+  transition: all 0.4s ease-in-out;
+  transform: translateX(0px);
+}
+.nav__list li:hover {
+  transition: all 0.4s ease-in-out;
+  transform: translateX(20px);
+}
+.nav__list a {
+  font-size: 28px;
+  text-decoration: none;
 }
 
 .news-slider {
@@ -152,6 +200,7 @@ section {
 
 .services__list {
   list-style: none;
+  margin-bottom: 50px;
 }
 .services__list li {
   margin-bottom: 10px;
@@ -165,6 +214,24 @@ section {
 .services__list li:hover {
   transition: all 0.4s ease-in-out;
   transform: translateX(30px);
+}
+
+.main-link {
+  display: flex;
+  font-size: 30px;
+  text-decoration: none;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.main-link img {
+  width: 33px;
+  margin-left: 15px;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(0px);
+}
+.main-link:hover img {
+  transition: all 0.3s ease-in-out;
+  transform: translateX(15px);
 }
 
 .victories {
@@ -287,10 +354,6 @@ section {
   margin-bottom: 40px;
 }
 
-.map__container {
-  padding-left: 60px;
-  padding-right: 60px;
-}
 .map__container img {
   width: 100%;
 }
@@ -324,6 +387,65 @@ section {
 }
 .logo-container img {
   width: 100%;
+}
+
+.modal {
+  position: absolute;
+  background: #fff;
+  padding: 30px;
+  top: 90%;
+  left: 0%;
+  margin-right: auto;
+  margin-left: auto;
+  right: 0%;
+  width: 380px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0px 21px 26px -17px rgba(0, 0, 0, 0.32);
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.modal__body input[type=text], .modal__body input[type=phone], .modal__body input[type=mail] {
+  display: block;
+  border: none;
+  border-bottom: 1.3px solid #e4e4e4;
+  width: 90%;
+  margin-bottom: 30px;
+}
+.modal__body input:focus {
+  border: none;
+  border-bottom: 1.3px solid #e4e4e4;
+  outline: none;
+  padding-bottom: 20px;
+  transition: 0.4s;
+}
+.modal__body input[type=checkbox] {
+  display: inline-block;
+  margin-right: 10px;
+}
+.modal__body input[type=submit] {
+  background: #1748c7;
+  padding: 10px 20px;
+  color: #fff;
+  border: none;
+  margin-top: 30px;
+  display: block;
+}
+
+.modal__cross {
+  background: url(../img/close.svg);
+  background-size: cover;
+  width: 20px;
+  height: 20px;
 }
 
 @media (min-width: 320px) and (max-width: 900px) {
@@ -433,25 +555,25 @@ section {
   .services {
     min-width: 350px;
   }
+
+  .nav-main__hamburger {
+    margin-left: auto;
+  }
 }
 @media (min-width: 320px) and (max-width: 1440px) {
   .victories-post {
     max-width: 320px;
   }
-
-  .nav-main__logo {
+  .victories-post .nav-main__logo {
     max-width: 350px;
   }
-
-  .proBono__logo img {
+  .victories-post .proBono__logo img {
     max-width: 400px;
   }
-
-  .nav-main__hamburger {
+  .victories-post .nav-main__hamburger {
     margin-left: 50px;
   }
-
-  .review-block {
+  .victories-post .review-block {
     margin-top: 20px;
   }
 }
@@ -504,8 +626,9 @@ section {
     padding-top: 25px;
   }
 
-  .nav-main__hamburger img {
-    width: 60px;
+  .nav-main__hamburger {
+    width: 40px;
+    height: 40px;
   }
 
   .main-page {
@@ -519,11 +642,6 @@ section {
 
   .slider__item-container {
     padding-left: 50px;
-  }
-
-  .map__container {
-    padding-left: 30px;
-    padding-right: 30px;
   }
 
   .nav-main {
@@ -543,6 +661,16 @@ section {
   .slider__item .slider__item-container {
     padding-right: 30px;
     padding-left: 30px;
+  }
+
+  .main-footer {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .nav__list ul {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 @media (min-width: 320px) and (max-width: 480px) {
@@ -574,11 +702,22 @@ section {
   }
 
   .nav-main__phone-n-adress {
-    padding-top: 15px;
+    padding-top: 7px;
   }
 
   .slider__title {
     font-size: 48px;
+  }
+
+  .modal {
+    width: 300px;
+    padding: 20px;
+  }
+}
+@media (min-width: 320px) and (max-width: 390px) {
+  .modal {
+    width: 250px;
+    padding: 20px;
   }
 }
 @font-face {
